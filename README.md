@@ -5,7 +5,7 @@ Keras implementation of SRWGAN-GP for 4$\times$ face upscaling. Model is based o
 Generator's loss is: <br/>
 L = -0.001 Adversarial + 0.3 VGG19 + 0.7 MSE. <br/>
 <br/>
-32$\times$32 face images are upscaled 4$\times$ up to 128$\times$128.
+32x32 face images are upscaled 4x up to 128x128.
 
 from left: LR, SRWGANGP, HR
 <p align="center">
@@ -52,7 +52,7 @@ python hd_celeba.py --data_dir path_to_dataset --crop_size 128 --order 3 --save_
         └── list_eval_partition.csv
 ```
 
-You can obtain 32$\times$32 and 128$\times$128 images split into training, validation and test folders by running:
+You can obtain 32x32 and 128x128 images split into training, validation and test folders by running:
 <br/>
 ```console
 python create_dataset.py --cropped_dir path_to_cropped_images_directory
