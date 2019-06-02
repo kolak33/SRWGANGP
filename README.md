@@ -7,6 +7,7 @@ L = -0.001 Adversarial + 0.3 VGG19 + 0.7 MSE. <br/>
 <br/>
 32$\times$32 face images are upscaled 4$\times$ up to 128$\times$128.
 
+from left: LR, SRWGANGP, HR
 <p align="center">
 <img src="./results/1_LR.png" width="30.0%"> <img src="./results/1_SR.png" width="30.0%"> <img src="./results/1_HR.png" width="30.0%">
 </p>
@@ -116,6 +117,7 @@ python srwgangp_threaded.py
 ```
 
 # <center> Results <center>
+from left: LR, SRWGANGP, HR
 
 <p align="center">
 <img src="./results/2_LR.png" width="30.0%"> <img src="./results/2_SR.png" width="30.0%"> <img src="./results/2_HR.png" width="30.0%">
