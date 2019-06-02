@@ -9,7 +9,7 @@ L = -0.001 Adversarial + 0.3 VGG19 + 0.7 MSE. <br/>
 
 from left: LR, SRWGANGP, HR
 <p align="center">
-<img src="./results/1_LR.png" width="30.0%"> <img src="./results/1_SR.png" width="30.0%"> <img src="./results/1_HR.png" width="30.0%">
+<img src="./results/1_LR.png" width="20.0%"> <img src="./results/1_SR.png" width="20.0%"> <img src="./results/1_HR.png" width="20.0%">
 </p>
 
 # <center> Requirements <center>
@@ -120,7 +120,7 @@ python srwgangp_threaded.py
 from left: LR, SRWGANGP, HR
 
 <p align="center">
-<img src="./results/2_LR.png" width="30.0%"> <img src="./results/2_SR.png" width="30.0%"> <img src="./results/2_HR.png" width="30.0%">
-<img src="./results/3_LR.png" width="30.0%"> <img src="./results/3_SR.png" width="30.0%"> <img src="./results/3_HR.png" width="30.0%">
-<img src="./results/4_LR.png" width="30.0%"> <img src="./results/4_SR.png" width="30.0%"> <img src="./results/4_HR.png" width="30.0%">
+<img src="./results/2_LR.png" width="20.0%"> <img src="./results/2_SR.png" width="20.0%"> <img src="./results/2_HR.png" width="20.0%">
+<img src="./results/3_LR.png" width="20.0%"> <img src="./results/3_SR.png" width="20.0%"> <img src="./results/3_HR.png" width="20.0%">
+<img src="./results/4_LR.png" width="20.0%"> <img src="./results/4_SR.png" width="20.0%"> <img src="./results/4_HR.png" width="20.0%">
 </p>
