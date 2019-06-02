@@ -1,6 +1,6 @@
 # <center> SRWGAN-GP - Super Resolution Wasserstein GAN with Gradient Penalty <center>
 
-Keras implementation of SRWGAN-GP for 4$\times$ face upscaling. Model is based on SRGAN. Generator model is SRResNet with removed batch normalisation layers. Discriminator has decreased number of filters in conv layers and decreased number of units in dense layer to reduce number of parameters from ~21mln to ~5.6mln.
+Keras implementation of SRWGAN-GP for 4x face upscaling. Model is based on SRGAN. Generator model is SRResNet with removed batch normalisation layers. Discriminator has decreased number of filters in conv layers and decreased number of units in dense layer to reduce number of parameters from ~21mln to ~5.6mln.
 <br/>
 Generator's loss is: <br/>
 L = -0.001 Adversarial + 0.3 VGG19 + 0.7 MSE. <br/>
