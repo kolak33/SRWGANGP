@@ -8,7 +8,7 @@ L = -0.001 Adversarial + 0.3 VGG19 + 0.7 MSE. <br/>
 32$\times$32 face images are upscaled 4$\times$ up to 128$\times$128.
 
 <p align="center">
-<img src="./Results/1_LR.png" width="30.0%"> <img src="./Results/1_SR.png" width="30.0%"> <img src="./Results/1_HR.png" width="30.0%">
+<img src="./results/1_LR.png" width="30.0%"> <img src="./results/1_SR.png" width="30.0%"> <img src="./results/1_HR.png" width="30.0%">
 </p>
 
 # <center> Requirements <center>
@@ -70,42 +70,42 @@ Also a path to image files.
 
 You can also specify other additional options:
 
-- whether to pretrain generator or not
+- whether to pretrain generator or not <br/>
 PRETRAIN_GENERATOR = True
-- whether to load pretrained generator weights
+- whether to load pretrained generator weights <br/>
 LOAD_PRETRAINED_GENERATOR = False
-- pretrain generator model for PRETRAIN_EPOCHS, minimizing only MSE
+- pretrain generator model for PRETRAIN_EPOCHS, minimizing only MSE <br/>
 PRETRAIN_EPOCHS = 3
 
-- train whole model for NUM_EPOCHS
-NUM_EPOCHS = 50
+- train whole model for NUM_EPOCHS <br/>
+NUM_EPOCHS = 50 <br/>
 BATCH_SIZE = 32
 
-- number of data generator threads
+- number of data generator threads <br/>
 NUM_THREADS = 64
-- data generator queue size 
+- data generator queue size <br/>
 MAX_QUEUE_SIZE = 80
 
-- decrease learning rate after LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs
- in case of pretrained generator: learning rate will decrease when PSNR value on validation set 
- is not increased in consecutive LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs
- in case of normal training phase: generator's and discriminator's learning rate will decrease 
- when discriminator's training loss is not improved in consecutive LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs
+- decrease learning rate after LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs <br/>
+ in case of pretrained generator: learning rate will decrease when PSNR value on validation set <br/>
+ is not increased in consecutive LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs <br/>
+ in case of normal training phase: generator's and discriminator's learning rate will decrease <br/>
+ when discriminator's training loss is not improved in consecutive LR_DECAY_NO_IMPROVEMENT_EPOCHS epochs <br/>
 LR_DECAY_NO_IMPROVEMENT_EPOCHS = 2
 
-- decrease pretrained generator's learning rate by LR_DECAY_PRETRAIN
+- decrease pretrained generator's learning rate by LR_DECAY_PRETRAIN <br/>
 LR_DECAY_PRETRAIN = 2.
-- decrease learning rate of generator and discriminator by LR_DECAY_FACTOR
+- decrease learning rate of generator and discriminator by LR_DECAY_FACTOR <br/>
 LR_DECAY_FACTOR = 2.
 
-values from papers:
-- number of discriminator updates per generator update
-TRAINING_RATIO = 5
-- gradient penalty weight used in discriminator loss function
+- values from papers: <br/>
+number of discriminator updates per generator update <br/>
+TRAINING_RATIO = 5 <br/>
+gradient penalty weight used in discriminator loss function <br/>
 GRADIENT_PENALTY_WEIGHT = 10
 
-- path to save and load a pretrained generator model
-PRETRAINED_GENERATOR_MODEL_PATH = 'Weights/pretrained_gen_model.h5'
+- path to save and load a pretrained generator model <br/>
+PRETRAINED_GENERATOR_MODEL_PATH = 'Weights/pretrained_gen_model.h5' <br/>
 PRETRAINED_GENERATOR_WEIGHTS_PATH = 'Weights/pretrained_gen_weights.h5'
 	
 	# <center> Start training <center>
@@ -118,7 +118,7 @@ python srwgangp_threaded.py
 # <center> Results <center>
 
 <p align="center">
-<img src="./Results/2_LR.png" width="30.0%"> <img src="./Results/2_SR.png" width="30.0%"> <img src="./Results/2_HR.png" width="30.0%">
-<img src="./Results/3_LR.png" width="30.0%"> <img src="./Results/3_SR.png" width="30.0%"> <img src="./Results/3_HR.png" width="30.0%">
-<img src="./Results/4_LR.png" width="30.0%"> <img src="./Results/4_SR.png" width="30.0%"> <img src="./Results/4_HR.png" width="30.0%">
+<img src="./results/2_LR.png" width="30.0%"> <img src="./results/2_SR.png" width="30.0%"> <img src="./results/2_HR.png" width="30.0%">
+<img src="./results/3_LR.png" width="30.0%"> <img src="./results/3_SR.png" width="30.0%"> <img src="./results/3_HR.png" width="30.0%">
+<img src="./results/4_LR.png" width="30.0%"> <img src="./results/4_SR.png" width="30.0%"> <img src="./results/4_HR.png" width="30.0%">
 </p>
