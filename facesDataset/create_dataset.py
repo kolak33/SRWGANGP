@@ -13,7 +13,7 @@ args = parser.parse_args()
 # create low, medium and high resolution datasets used in training based on original HD dataset
 dirs = ['faces/32/train_imgs/train', 'faces/32/val_imgs/val', 'faces/32/test_imgs/test',
        'faces/128/train_imgs/train', 'faces/128/val_imgs/val', 'faces/128/test_imgs/test',
-       'Weights', 'Images/HR', 'Images/SRWGANGP', 'Images/NN_128']
+       '../Weights', '../Images/HR', '../Images/SRWGANGP', '../Images/NN_128']
 original_dataset_path = args.cropped_dir
 
 HIGH_SCALE = 4.0
