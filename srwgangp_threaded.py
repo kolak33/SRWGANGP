@@ -725,6 +725,7 @@ class SRWGANGP(SRWGANGPConfig):
 		file_path_test_list_hr = [os.path.join(self.TEST_128_DATA_GENERATOR_PATH, 'test', x) for x in os.listdir(os.path.join(self.TEST_128_DATA_GENERATOR_PATH, 'test'))]
 
 		final_training = False
+		epoch=-1
 		queue_batches, threads_list = self.start_epoch_threads(
 										data_gen_thread_func=self.data_gen_thread,
 										file_path_list_lr=file_path_test_list_lr,
@@ -755,6 +756,10 @@ class SRWGANGP(SRWGANGPConfig):
 		file_path_test_list_256 = [os.path.join(self.TEST_256_DATA_GENERATOR_PATH, 'test', x) for x in os.listdir(os.path.join(self.TEST_256_DATA_GENERATOR_PATH, 'test'))]
 		self.epoch_curr = -1
 
+		self.curr_HR_size = self.LR_TARGET_SIZE[0] * 4
+		HR_TARGET_SIZE = (self.curr_HR_size, self.curr_HR_size)
+		self.generator_model_train, self.discriminator_model = self.create_model_architecture(
+																HR_TARGET_SIZE = HR_TARGET_SIZE)
 		# TODO SRWGANGP path
 		gen_path_model = str('Weights/gen_srwgangp_model_128_epoch_0.h5')
 		self.load_pretrained_generator(self.generator_model_train, gen_path_model)
