@@ -193,7 +193,7 @@ class SRWGANGP(SRWGANGPConfig):
 
 		self.generator_model_valid = Model(inputs=[generator_input],
 								outputs=[discriminator_layers_for_generator, generator_layers, generator_layers])
-		self.generator_model_valid.compile(optimizer=Adam(0.00005, beta_1=0.5, beta_2=0.9),
+		self.generator_model_valid.compile(optimizer=Adam(0.0001, beta_1=0.5, beta_2=0.9),
 								loss=[self.wasserstein_loss, self.vgg_loss, 'mean_squared_error'],
 								loss_weights=[1e-3, 3e-1, 7e-1],
 								metrics=[self.PSNR])
@@ -231,7 +231,7 @@ class SRWGANGP(SRWGANGPConfig):
 							 discriminator_output_from_generator,
 							 averaged_samples_out])
 
-		discriminator_model.compile(optimizer=Adam(0.00005, beta_1=0.5, beta_2=0.9),
+		discriminator_model.compile(optimizer=Adam(0.0001, beta_1=0.5, beta_2=0.9),
 								loss= [self.wasserstein_loss,
 								       self.wasserstein_loss,
 								       partial_gp_loss])
