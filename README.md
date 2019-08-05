@@ -14,8 +14,9 @@ from left: LR, SRWGANGP, HR
 
 # <center> Requirements <center>
 
+- python 3.6.6
 - tensorflow-gpu
-- keras
+- keras 2.2.4
 - opencv
 - scikit-image
 - csvkit
