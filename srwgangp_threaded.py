@@ -710,7 +710,7 @@ class SRWGANGP(SRWGANGPConfig):
 			batch_test_32 = self.denormalize_batch_images(batch_test_32)
 			batch_128_nearest = []
 			for i in range(self.BATCH_SIZE):
-				img = misc.imresize(batch_test_32[i], NN_size, interp="nearest")
+				img = misc.imresize(batch_test_32[i], DOWNSCALE_FACTOR, interp="nearest")
 				batch_128_nearest.append(img)
 
 			PSNR_batch_nearest = self.PSNR_test_array(y_true=batch_test_128, y_pred=batch_128_nearest)
